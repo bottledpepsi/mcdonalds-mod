@@ -11,6 +11,8 @@ public class ModFoodComponents {
     public static final FoodComponent CASH_REGISTER = new FoodComponent.Builder().hunger(1).saturationModifier(0f).build();
     public static final FoodComponent HASHBROWN = new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build();
     public static final FoodComponent LARGE_COKE = new FoodComponent.Builder().hunger(0).saturationModifier(0f).build();
+    public static final FoodComponent APPLE_PIE = new FoodComponent.Builder().hunger(4).saturationModifier(0.3f).build();
+
 
 
 }

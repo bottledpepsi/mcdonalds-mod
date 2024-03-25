@@ -15,6 +15,8 @@ public class ModItems {
     public static final Item CASH_REGISTER = new Item(new Item.Settings().food(ModFoodComponents.CASH_REGISTER));
     public static final Item HASHBROWN = new Item(new Item.Settings().food(ModFoodComponents.HASHBROWN));
     public static final Item LARGE_COKE = new LargeCokeItem(new Item.Settings().food(ModFoodComponents.LARGE_COKE));
+    public static final Item APPLE_PIE = new Item(new Item.Settings().food(ModFoodComponents.APPLE_PIE));
+
 
     public static void registerModItems() {
         McdonaldsMod.LOGGER.info("Registering Mod Items for " + McdonaldsMod.MOD_ID);
@@ -25,7 +27,7 @@ public class ModItems {
         Registry.register(Registries.ITEM, new Identifier(McdonaldsMod.MOD_ID, "cash_register"), CASH_REGISTER);
         Registry.register(Registries.ITEM, new Identifier(McdonaldsMod.MOD_ID, "hashbrown"), HASHBROWN);
         Registry.register(Registries.ITEM, new Identifier(McdonaldsMod.MOD_ID, "large_coke"), LARGE_COKE);
-
+        Registry.register(Registries.ITEM, new Identifier(McdonaldsMod.MOD_ID, "apple_pie"), APPLE_PIE);
 
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((entries) -> {
@@ -35,6 +37,7 @@ public class ModItems {
             entries.add(CASH_REGISTER);
             entries.add(HASHBROWN);
             entries.add(LARGE_COKE);
+            entries.add(APPLE_PIE);
 
 
         });
