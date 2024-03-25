@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "mcdonalds",
+	"version": "${version}",
+	"name": "Mcdonalds Mod",
+	"description": "Adds Mcdonalds menu items to the game ",
+	"authors": [
+		"smo0008"
+	],
+	"contact": {
+		"homepage": "https://mcdonalds.com.au/",
+		"sources": "maccas"
+	},
+	"license": "MIT License",
+	"icon": "assets/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.ruben.mcdonalds.McdonaldsMod"
+		],
+		"client": [
+			"net.ruben.mcdonalds.McdonaldsClient"
+		]
+	},
+	"mixins": [
+		"mcdonalds.mixins.json",
+		{
+			"config": "mcdonalds.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
