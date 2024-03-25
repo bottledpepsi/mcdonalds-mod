@@ -1,7 +1,7 @@
 package net.ruben.mcdonalds.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
+import net.minecraft.item.*;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -17,7 +17,6 @@ public class ModItems {
     public static final Item LARGE_COKE = new LargeCokeItem(new Item.Settings().food(ModFoodComponents.LARGE_COKE));
     public static final Item APPLE_PIE = new Item(new Item.Settings().food(ModFoodComponents.APPLE_PIE));
 
-
     public static void registerModItems() {
         McdonaldsMod.LOGGER.info("Registering Mod Items for " + McdonaldsMod.MOD_ID);
 
@@ -28,6 +27,7 @@ public class ModItems {
         Registry.register(Registries.ITEM, new Identifier(McdonaldsMod.MOD_ID, "hashbrown"), HASHBROWN);
         Registry.register(Registries.ITEM, new Identifier(McdonaldsMod.MOD_ID, "large_coke"), LARGE_COKE);
         Registry.register(Registries.ITEM, new Identifier(McdonaldsMod.MOD_ID, "apple_pie"), APPLE_PIE);
+
 
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((entries) -> {
