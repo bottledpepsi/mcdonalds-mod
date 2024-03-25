@@ -24,6 +24,7 @@ public class LargeCokeItem extends Item {
         if (user instanceof PlayerEntity player) {
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 200, 0)); // 10 seconds of Speed I (200 ticks)
         }
+        stack.decrement(1);
         return stack;
     }
 }
