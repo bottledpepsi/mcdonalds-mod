@@ -1,6 +1,7 @@
 package net.ruben.mcdonalds.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -16,20 +17,31 @@ public class ModItems {
     public static final Item HASHBROWN = registerItem("hashbrown", new Item(new FabricItemSettings().food(ModFoodComponents.HASHBROWN)));
     public static final Item LARGE_COKE = registerItem("large_coke", new LargeCokeItem(new FabricItemSettings().food(ModFoodComponents.LARGE_COKE)));
     public static final Item APPLE_PIE = registerItem("apple_pie", new Item(new FabricItemSettings().food(ModFoodComponents.APPLE_PIE)));
+    public static final Item MCPICKAXE = registerItem("mcpickaxe", new PickaxeItem(ModToolMaterial.MCNUGGET, 2, 2f, new FabricItemSettings()));
+
 
     public static void registerModItems() {
         McdonaldsMod.LOGGER.info("Registering Mod Items for " + McdonaldsMod.MOD_ID);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((entries) -> {
-            entries.add(BIG_MAC);
-            entries.add(SMALL_FRIES);
-            entries.add(MCNUGGET);
-            entries.add(CASH_REGISTER);
-            entries.add(HASHBROWN);
-            entries.add(LARGE_COKE);
-            entries.add(APPLE_PIE);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::modifyEntries);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register((entries) -> {
+            entries.add(MCPICKAXE);
+
+
         });
     }
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(McdonaldsMod.MOD_ID, name), item);
+    }
+
+    private static void modifyEntries(FabricItemGroupEntries entries) {
+        entries.add(BIG_MAC);
+        entries.add(SMALL_FRIES);
+        entries.add(MCNUGGET);
+        entries.add(CASH_REGISTER);
+        entries.add(HASHBROWN);
+        entries.add(LARGE_COKE);
+        entries.add(APPLE_PIE);
+
+
     }
 }
