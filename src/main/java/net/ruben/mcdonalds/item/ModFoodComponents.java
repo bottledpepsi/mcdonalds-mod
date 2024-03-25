@@ -9,7 +9,9 @@ public class ModFoodComponents {
     public static final FoodComponent SMALL_FRIES = new FoodComponent.Builder().hunger(3).saturationModifier(0.2f).build();
     public static final FoodComponent MCNUGGET = new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build();
     public static final FoodComponent CASH_REGISTER = new FoodComponent.Builder().hunger(1).saturationModifier(0f).build();
-    public static final FoodComponent HASHBROWN = new FoodComponent.Builder().hunger(3).saturationModifier(3f).build();
+    public static final FoodComponent HASHBROWN = new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build();
+    public static final FoodComponent LARGE_COKE = new FoodComponent.Builder().hunger(0).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 200, 0), 0.5f).build();
+
 
 
 }

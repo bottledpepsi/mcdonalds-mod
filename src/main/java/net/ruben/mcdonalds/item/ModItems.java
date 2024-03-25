@@ -1,10 +1,6 @@
 package net.ruben.mcdonalds.item;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -18,6 +14,7 @@ public class ModItems {
     public static final Item MCNUGGET = new Item(new Item.Settings().food(ModFoodComponents.MCNUGGET));
     public static final Item CASH_REGISTER = new Item(new Item.Settings().food(ModFoodComponents.CASH_REGISTER));
     public static final Item HASHBROWN = new Item(new Item.Settings().food(ModFoodComponents.HASHBROWN));
+    public static final Item LARGE_COKE = new Item(new Item.Settings().food(ModFoodComponents.LARGE_COKE));
 
 
     public static void registerModItems() {
@@ -28,7 +25,7 @@ public class ModItems {
         Registry.register(Registries.ITEM, new Identifier(McdonaldsMod.MOD_ID, "mcnugget"), MCNUGGET);
         Registry.register(Registries.ITEM, new Identifier(McdonaldsMod.MOD_ID, "cash_register"), CASH_REGISTER);
         Registry.register(Registries.ITEM, new Identifier(McdonaldsMod.MOD_ID, "hashbrown"), HASHBROWN);
-
+        Registry.register(Registries.ITEM, new Identifier(McdonaldsMod.MOD_ID, "large_coke"), LARGE_COKE);
 
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((entries) -> {
@@ -37,6 +34,7 @@ public class ModItems {
             entries.add(MCNUGGET);
             entries.add(CASH_REGISTER);
             entries.add(HASHBROWN);
+            entries.add(LARGE_COKE);
 
 
         });
