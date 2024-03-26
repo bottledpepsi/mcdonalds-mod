@@ -53,7 +53,6 @@ public class ModItems {
             entries.add(MEDIUM_COKE);
             entries.add(LARGE_COKE);
 
-
         });
     }
     private static Item registerItem(String name, Item item) {
