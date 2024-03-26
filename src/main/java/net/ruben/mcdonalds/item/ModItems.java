@@ -19,6 +19,7 @@ public class ModItems {
     public static final Item MEDIUM_COKE = registerItem("medium_coke", new MediumCokeItem(new FabricItemSettings().food(ModFoodComponents.MEDIUM_COKE)));
     public static final Item LARGE_COKE = registerItem("large_coke", new LargeCokeItem(new FabricItemSettings().food(ModFoodComponents.LARGE_COKE)));
 
+
     public static final Item APPLE_PIE = registerItem("apple_pie", new Item(new FabricItemSettings().food(ModFoodComponents.APPLE_PIE)));
     public static final Item MCPICKAXE = registerItem("mcpickaxe", new PickaxeItem(ModToolMaterial.MCNUGGET, 1, 0.5f, new FabricItemSettings()));
 
