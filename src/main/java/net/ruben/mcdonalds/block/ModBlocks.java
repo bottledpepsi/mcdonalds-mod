@@ -1,7 +1,9 @@
 package net.ruben.mcdonalds.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.item.ItemGroups;
 import net.ruben.mcdonalds.McdonaldsMod;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -27,22 +29,6 @@ public class ModBlocks {
     public static final Block END_STONE_MCIUM_ORE = registerBlock("end_stone_mcium_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(4, 7), FabricBlockSettings.copyOf(Blocks.END_STONE).strength(4f)));
 
-    public static final Block MCIUM_STAIRS = registerBlock("mcium_stairs",
-            new StairsBlock(ModBlocks.MCIUM_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
-    public static final Block MCIUM_SLAB = registerBlock("mcium_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
-
-    public static final Block MCIUM_BUTTON = registerBlock("mcium_button",
-            new ButtonBlock(BlockSetType.IRON, 10, FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
-    public static final Block MCIUM_PRESSURE_PLATE = registerBlock("mcium_pressure_plate",
-            new PressurePlateBlock(BlockSetType.IRON, FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
-
-    public static final Block MCIUM_DOOR = registerBlock("mcium_door",
-            new DoorBlock(BlockSetType.IRON, FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
-    public static final Block MCIUM_TRAPDOOR = registerBlock("mcium_trapdoor",
-            new TrapdoorBlock(BlockSetType.IRON, FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
-
-
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, new Identifier(McdonaldsMod.MOD_ID, name), block);
@@ -55,5 +41,19 @@ public class ModBlocks {
 
     public static void registerModBlocks() {
         McdonaldsMod.LOGGER.info("Registering ModBlocks for " + McdonaldsMod.MOD_ID);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register((entries) -> {
+            entries.add(MCIUM_BLOCK);
+            entries.add(RAW_MCIUM_BLOCK);
+
+
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register((entries) -> {
+            entries.add(MCIUM_ORE);
+            entries.add(DEEPSLATE_MCIUM_ORE);
+            entries.add(NETHER_MCIUM_ORE);
+            entries.add(END_STONE_MCIUM_ORE);
+
+
+        });
     }
 }
