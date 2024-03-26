@@ -6,7 +6,7 @@ import net.minecraft.recipe.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    MCNUGGET(4, 650, 4.5f, 3.5f, 56,
+    MCNUGGET(5, 650, 4.5f, 3.5f, 56,
             () -> Ingredient.ofItems(ModItems.MCNUGGET));
 
     private final int miningLevel;
