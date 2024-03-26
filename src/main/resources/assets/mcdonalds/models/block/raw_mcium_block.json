@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube_all",
+  "parent": "minecraft:block/cube_all",
   "textures": {
     "all": "mcdonalds:block/raw_mcium_block",
     "particle": "mcdonalds:block/raw_mcium_block"

@@ -12,7 +12,9 @@
   "item.mcdonalds.apple_pie": "Apple Pie",
   "item.mcdonalds.mcpickaxe": "McPickaxe",
   "item.mcdonalds.raw_mcium": "Raw Mcium",
-  "item.mcdonalds.mcium_ingot": "Mcium Ingot"
+  "item.mcdonalds.mcium_ingot": "Mcium Ingot",
+  "block.mcdonalds.raw_mcium_block": "Block of Raw Mcium",
+  "block.mcdonalds.mcium_block": "Mcium Block"
 
 
 }

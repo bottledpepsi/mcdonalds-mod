@@ -1,4 +1,4 @@
-package net.ruben.mcdonalds.item;
+package net.ruben.mcdonalds.item.CokeItem;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -9,8 +9,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
-public class SmallCokeItem extends Item {
-    public SmallCokeItem(Settings settings) {
+public class LargeCokeItem extends Item {
+    public LargeCokeItem(Item.Settings settings) {
         super(settings);
     }
 
@@ -22,7 +22,7 @@ public class SmallCokeItem extends Item {
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         if (user instanceof PlayerEntity player) {
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 60, 0));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 160, 1));
             if (!player.getAbilities().creativeMode) {
                 stack.decrement(1);
             }

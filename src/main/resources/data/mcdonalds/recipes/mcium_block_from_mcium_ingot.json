@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mcdonalds:mcium_ingot"
+    },
+    {
+      "item": "mcdonalds:mcium_ingot"
+    },
+    {
+      "item": "mcdonalds:mcium_ingot"
+    },
+    {
+      "item": "mcdonalds:mcium_ingot"
+    },
+    {
+      "item": "mcdonalds:mcium_ingot"
+    },
+    {
+      "item": "mcdonalds:mcium_ingot"
+    },
+    {
+      "item": "mcdonalds:mcium_ingot"
+    },
+    {
+      "item": "mcdonalds:mcium_ingot"
+    },
+    {
+      "item": "mcdonalds:mcium_ingot"
+    }
+  ],
+  "result": {
+    "item": "mcdonalds:mcium_block",
+    "count": 1
+  }
+}

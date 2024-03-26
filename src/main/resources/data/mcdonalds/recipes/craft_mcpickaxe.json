@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:mcium_ingot"
+      "item": "mcdonalds:mcium_ingot"
     },
     "/": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "minecraft:mcpickaxe",
+    "item": "mcdonalds:mcpickaxe",
     "count": 1
   }
 }
