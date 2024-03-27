@@ -1,4 +1,4 @@
-package net.ruben.mcdonalds.item.CokeItem;
+package net.ruben.mcdonalds.item.cokeItem;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;

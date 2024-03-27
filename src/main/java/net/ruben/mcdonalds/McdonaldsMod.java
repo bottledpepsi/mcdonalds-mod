@@ -16,6 +16,7 @@ public class McdonaldsMod implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
 
+
     }
 
 }

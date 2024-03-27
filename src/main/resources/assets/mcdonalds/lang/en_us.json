@@ -14,7 +14,11 @@
   "item.mcdonalds.raw_mcium": "Raw Mcium",
   "item.mcdonalds.mcium_ingot": "Mcium Ingot",
   "block.mcdonalds.raw_mcium_block": "Block of Raw Mcium",
-  "block.mcdonalds.mcium_block": "Mcium Block"
+  "block.mcdonalds.mcium_block": "Block of Mcium",
+  "block.mcdonalds.mcium_ore": "Mcium Ore",
+  "block.mcdonalds.deepslate_mcium_ore": "Deepslate Mcium Ore",
+  "block.mcdonalds.nether_mcium_ore": "Nether Mcium Ore",
+  "block.mcdonalds.end_mcium_ore": "End Mcium Ore"
 
 
 }

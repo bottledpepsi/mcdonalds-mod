@@ -7,9 +7,9 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.ruben.mcdonalds.McdonaldsMod;
-import net.ruben.mcdonalds.item.CokeItem.LargeCokeItem;
-import net.ruben.mcdonalds.item.CokeItem.MediumCokeItem;
-import net.ruben.mcdonalds.item.CokeItem.SmallCokeItem;
+import net.ruben.mcdonalds.item.cokeItem.LargeCokeItem;
+import net.ruben.mcdonalds.item.cokeItem.MediumCokeItem;
+import net.ruben.mcdonalds.item.cokeItem.SmallCokeItem;
 
 public class ModItems {
     public static final Item BIG_MAC = registerItem("big_mac", new Item(new FabricItemSettings().food(ModFoodComponents.BIG_MAC)));
