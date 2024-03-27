@@ -27,8 +27,6 @@ public class ModItems {
     public static final Item RAW_MCIUM = registerItem("raw_mcium", new Item(new FabricItemSettings()));
     public static final Item MCIUM_INGOT = registerItem("mcium_ingot", new Item(new FabricItemSettings()));
 
-
-
     public static void registerModItems() {
         McdonaldsMod.LOGGER.info("Registering Mod Items for " + McdonaldsMod.MOD_ID);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register((entries) -> {

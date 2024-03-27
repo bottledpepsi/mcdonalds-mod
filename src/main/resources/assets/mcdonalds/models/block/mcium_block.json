@@ -1,8 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "mcdonalds:block/mcium_block",
-    "particle": "mcdonalds:block/mcium_block"
-  },
-  "render_type": "solid"
+    "all": "mcdonalds:block/mcium_block"
+  }
 }
