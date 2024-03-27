@@ -4,21 +4,19 @@
   "item.mcdonalds.medium_fries": "Medium Fries",
   "item.mcdonalds.large_fries": "Large Fries",
   "item.mcdonalds.mcnugget": "McNugget",
-  "item.mcdonalds.cash_register": "Cash Register",
   "item.mcdonalds.hashbrown": "Hashbrown",
   "item.mcdonalds.small_coke": "Small Coke",
   "item.mcdonalds.medium_coke": "Medium Coke",
   "item.mcdonalds.large_coke": "Large Coke",
   "item.mcdonalds.apple_pie": "Apple Pie",
-  "item.mcdonalds.mcpickaxe": "McPickaxe",
+  "item.mcdonalds.mcium_pickaxe": "Mcium Pickaxe",
   "item.mcdonalds.raw_mcium": "Raw Mcium",
   "item.mcdonalds.mcium_ingot": "Mcium Ingot",
   "block.mcdonalds.raw_mcium_block": "Block of Raw Mcium",
   "block.mcdonalds.mcium_block": "Block of Mcium",
   "block.mcdonalds.mcium_ore": "Mcium Ore",
   "block.mcdonalds.deepslate_mcium_ore": "Deepslate Mcium Ore",
-  "block.mcdonalds.nether_mcium_ore": "Nether Mcium Ore",
-  "block.mcdonalds.end_mcium_ore": "End Mcium Ore"
+  "itemgroup.meccas": "Maccas"
 
 
 }

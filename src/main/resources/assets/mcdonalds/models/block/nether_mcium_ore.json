@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "mcdonalds:block/nether_mcium_ore"
-  }
-}

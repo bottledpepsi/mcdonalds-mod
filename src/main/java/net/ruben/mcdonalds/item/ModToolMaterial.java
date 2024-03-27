@@ -6,8 +6,8 @@ import net.minecraft.recipe.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    MCNUGGET(5, 650, 4.5f, 3.5f, 56,
-            () -> Ingredient.ofItems(ModItems.MCNUGGET));
+    MCIUM_INGOT(5, 650, 15f, 3.5f, 56,
+            () -> Ingredient.ofItems(ModItems.MCIUM_INGOT));
 
     private final int miningLevel;
     private final int itemDurability;

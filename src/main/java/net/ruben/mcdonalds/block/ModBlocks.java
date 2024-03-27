@@ -17,34 +17,19 @@ import net.ruben.mcdonalds.McdonaldsMod;
 
 public class ModBlocks {
     public static final Block MCIUM_BLOCK = registerBlock("mcium_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.METAL)));
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.METAL).strength(0.5f)));
     public static final Block RAW_MCIUM_BLOCK = registerBlock("raw_mcium_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK).sounds(BlockSoundGroup.STONE)));
+            new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK).sounds(BlockSoundGroup.STONE).strength(0.2f)));
 
     public static final Block MCIUM_ORE = registerBlock("mcium_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).strength(2f)));
+            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).strength(0.2f)));
     public static final Block DEEPSLATE_MCIUM_ORE = registerBlock("deepslate_mcium_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), FabricBlockSettings.copyOf(Blocks.DEEPSLATE_DIAMOND_ORE).strength(4f)));
-    public static final Block NETHER_MCIUM_ORE = registerBlock("nether_mcium_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), FabricBlockSettings.copyOf(Blocks.GILDED_BLACKSTONE).strength(1.5f)));
-    public static final Block END_MCIUM_ORE = registerBlock("end_mcium_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(4, 7), FabricBlockSettings.copyOf(Blocks.END_STONE).strength(4f)));
+            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), FabricBlockSettings.copyOf(Blocks.DEEPSLATE_DIAMOND_ORE).strength(0.5f)));
 
 
     public static void registerModBlocks() {
         McdonaldsMod.LOGGER.info("Registering Mod Items for " + McdonaldsMod.MOD_ID);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register((entries) -> {
-            entries.add(MCIUM_BLOCK);
-            entries.add(RAW_MCIUM_BLOCK);
-
-
-        });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register((entries) -> {
-            entries.add(MCIUM_ORE);
-            entries.add(DEEPSLATE_MCIUM_ORE);
-            entries.add(NETHER_MCIUM_ORE);
-            entries.add(END_MCIUM_ORE);
-
 
         });
     }
