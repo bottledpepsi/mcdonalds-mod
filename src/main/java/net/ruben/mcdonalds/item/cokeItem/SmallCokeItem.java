@@ -22,7 +22,7 @@ public class SmallCokeItem extends Item {
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         if (user instanceof PlayerEntity player) {
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 60, 0));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 100, 0));
             if (!player.getAbilities().creativeMode) {
                 stack.decrement(1);
             }
