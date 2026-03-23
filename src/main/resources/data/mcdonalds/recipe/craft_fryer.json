@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["MMM", " I ", "III"],
+  "key": {
+    "M": "mcdonalds:mcium_ingot",
+    "I": "minecraft:iron_ingot"
+  },
+  "result": { "id": "mcdonalds:fryer", "count": 1 }
+}

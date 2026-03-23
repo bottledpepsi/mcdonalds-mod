@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["#", "#", "/"],
+  "key": {
+    "#": "mcdonalds:mcium_ingot",
+    "/": "minecraft:stick"
+  },
+  "result": { "id": "mcdonalds:mcium_sword", "count": 1 }
+}

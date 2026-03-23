@@ -2,24 +2,24 @@
 	"schemaVersion": 1,
 	"id": "mcdonalds",
 	"version": "${version}",
-	"name": "Mcdonalds Mod",
-	"description": "Adds Mcdonalds menu items to the game ",
+	"name": "McDonalds Mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"smo0008"
+		"Me!"
 	],
 	"contact": {
-		"homepage": "https://mcdonalds.com.au/",
-		"sources": "maccas"
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "MIT License",
-	"icon": "assets/icon.png",
+	"license": "CC0-1.0",
+	"icon": "assets/mcdonalds/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.ruben.mcdonalds.McdonaldsMod"
+			"bottled.mcdonalds.McDonaldsMod"
 		],
 		"client": [
-			"net.ruben.mcdonalds.McdonaldsClient"
+			"bottled.mcdonalds.McDonaldsModClient"
 		]
 	},
 	"mixins": [
@@ -30,12 +30,9 @@
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.15.0",
-		"minecraft": "~1.20.4",
-		"java": ">=17",
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~26.1-",
+		"java": ">=25",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }

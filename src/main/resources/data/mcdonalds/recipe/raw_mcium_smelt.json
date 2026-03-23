@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": "mcdonalds:raw_mcium",
+  "result": { "id": "mcdonalds:mcium_ingot" },
+  "experience": 4,
+  "cookingtime": 300
+}

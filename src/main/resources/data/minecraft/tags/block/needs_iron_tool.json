@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mcdonalds:mcium_block",
+    "mcdonalds:raw_mcium_block",
+    "mcdonalds:mcium_ore",
+    "mcdonalds:deepslate_mcium_ore"
+  ]
+}

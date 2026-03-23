@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": ["mcdonalds:raw_mcium_block"],
+  "result": { "id": "mcdonalds:raw_mcium", "count": 9 }
+}
