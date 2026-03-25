@@ -1,6 +1,0 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": ["##", "##"],
-  "key": { "#": "minecraft:cooked_chicken" },
-  "result": { "id": "mcdonalds:mcnugget", "count": 16 }
-}

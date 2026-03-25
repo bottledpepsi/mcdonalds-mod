@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": "mcdonalds:raw_nugget",
+  "result": { "id": "mcdonalds:mcnugget" },
+  "experience": 0.35,
+  "cookingtime": 100
+}

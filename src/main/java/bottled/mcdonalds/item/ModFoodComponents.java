@@ -13,19 +13,22 @@ public class ModFoodComponents {
     public static final Consumable BIG_MAC_CONSUMABLE = Consumables.defaultFood()
             .onConsume(new ApplyStatusEffectsConsumeEffect(
                     new MobEffectInstance(MobEffects.SLOWNESS, 200, 0), 0.5f))
+            .consumeSeconds(3)
             .build();
 
+    // Drink sound
     public static final Consumable COKE_CONSUMABLE = Consumables.defaultFood()
             .sound(SoundEvents.GENERIC_DRINK)
             .hasConsumeParticles(false)
             .build();
 
-    // McFlurry: brain freeze = Slowness II, sugar rush = Regeneration I
+    // McFlurry: brain freeze = Slowness II, sugar rush = Regeneration I // Gulpy sound
     public static final Consumable MCFLURRY_CONSUMABLE = Consumables.defaultFood()
             .onConsume(new ApplyStatusEffectsConsumeEffect(
                     new MobEffectInstance(MobEffects.SLOWNESS, 100, 1), 1.0f))
             .onConsume(new ApplyStatusEffectsConsumeEffect(
                     new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1.0f))
+            .sound(SoundEvents.HONEY_DRINK)
             .build();
 
     // McRib: Strength II for 10 seconds (200 ticks)
@@ -40,6 +43,10 @@ public class ModFoodComponents {
                     new MobEffectInstance(MobEffects.WATER_BREATHING, 600, 0), 1.0f))
             .onConsume(new ApplyStatusEffectsConsumeEffect(
                     new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 200, 0), 1.0f))
+            .build();
+
+    public static final Consumable MCNUGGET_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(0.75F)
             .build();
 
     public static final FoodProperties BIG_MAC       = new FoodProperties.Builder().nutrition(8).saturationModifier(0.5f).build();

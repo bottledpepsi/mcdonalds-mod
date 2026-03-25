@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "pattern": ["WW", "CC", "WW"],
+  "key": {
+    "C": "minecraft:chicken",
+    "W": "minecraft:wheat"
+  },
+  "result": { "id": "mcdonalds:raw_nugget", "count": 8 }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["W", "F", "W"],
+  "key": {
+    "F": "minecraft:salmon",
+    "W": "minecraft:wheat"
+  },
+  "result": { "id": "mcdonalds:raw_filet", "count": 1 }
+}

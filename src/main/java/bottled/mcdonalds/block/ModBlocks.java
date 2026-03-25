@@ -9,7 +9,6 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import bottled.mcdonalds.block.FryerBlock;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -37,10 +36,6 @@ public class ModBlocks {
             p -> new DropExperienceBlock(UniformInt.of(2, 5),
                     BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_DIAMOND_ORE)
                             .strength(55f, 1200f).setId(p)));
-
-    public static final Block FRYER = registerBlock("fryer",
-            p -> new FryerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)
-                    .sound(SoundType.METAL).strength(3.5f).setId(p)));
 
     private static Block registerBlock(String name, Function<ResourceKey<Block>, Block> factory) {
         Identifier id = Identifier.fromNamespaceAndPath(McDonaldsMod.MOD_ID, name);

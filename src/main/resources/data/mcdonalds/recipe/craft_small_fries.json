@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "pattern": ["F", "P"],
+  "key": {
+    "F": "mcdonalds:fried_potatoes",
+    "P": "minecraft:paper"
+  },
+  "result": { "id": "mcdonalds:small_fries", "count": 1 }
+}

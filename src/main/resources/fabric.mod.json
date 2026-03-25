@@ -3,15 +3,15 @@
 	"id": "mcdonalds",
 	"version": "${version}",
 	"name": "McDonalds Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Adds various items from the McDonalds menu.",
 	"authors": [
-		"Me!"
+		"bottledpepsi"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://bottledpepsi.github.io/",
+		"sources": "https://github.com/bottledpepsi/mcdonalds-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "GPL-3.0",
 	"icon": "assets/mcdonalds/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -30,8 +30,8 @@
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.18.4",
-		"minecraft": "~26.1-",
+		"fabricloader": ">=0.18",
+		"minecraft": ">=26.1",
 		"java": ">=25",
 		"fabric-api": "*"
 	}

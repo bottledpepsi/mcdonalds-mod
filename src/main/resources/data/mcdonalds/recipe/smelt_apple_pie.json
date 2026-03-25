@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": "mcdonalds:raw_pie",
+  "result": { "id": "mcdonalds:apple_pie" },
+  "experience": 0.35,
+  "cookingtime": 200
+}

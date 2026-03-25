@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:milk_bucket",
+    "minecraft:sugar",
+    "minecraft:packed_ice"
+  ],
+  "result": { "id": "mcdonalds:mcflurry", "count": 1 }
+}

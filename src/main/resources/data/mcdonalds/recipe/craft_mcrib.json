@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["B", "P", "B"],
+  "key": {
+    "B": "minecraft:bread",
+    "P": "minecraft:cooked_porkchop"
+  },
+  "result": { "id": "mcdonalds:mcrib", "count": 1 }
+}

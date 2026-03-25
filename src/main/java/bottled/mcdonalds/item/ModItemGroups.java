@@ -38,11 +38,17 @@ public class ModItemGroups {
                         // Materials
                         output.accept(ModItems.RAW_MCIUM);
                         output.accept(ModItems.MCIUM_INGOT);
+                        // Crafting intermediates
+                        output.accept(ModItems.POTATO_CUTTER);
+                        output.accept(ModItems.RAW_FRIES);
+                        output.accept(ModItems.FRIED_POTATOES);
+                        output.accept(ModItems.RAW_NUGGET);
+                        output.accept(ModItems.RAW_FILET);
+                        output.accept(ModItems.RAW_PIE);
                         output.accept(ModBlocks.MCIUM_ORE);
                         output.accept(ModBlocks.DEEPSLATE_MCIUM_ORE);
                         output.accept(ModBlocks.RAW_MCIUM_BLOCK);
                         output.accept(ModBlocks.MCIUM_BLOCK);
-                        output.accept(ModBlocks.FRYER);
                         // Tools
                         output.accept(ModItems.MCIUM_PICKAXE);
                         output.accept(ModItems.MCIUM_SHOVEL);

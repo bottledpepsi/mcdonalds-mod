@@ -1,4 +1,5 @@
 {
+  "itemgroup.mcdonalds":                 "McDonalds",
   "item.mcdonalds.big_mac":              "Big Mac",
   "item.mcdonalds.small_fries":          "Small Fries",
   "item.mcdonalds.medium_fries":         "Medium Fries",
@@ -23,6 +24,10 @@
   "item.mcdonalds.mcium_block":          "Block of Mcium",
   "item.mcdonalds.mcium_ore":            "Mcium Ore",
   "item.mcdonalds.deepslate_mcium_ore":  "Deepslate Mcium Ore",
-  "block.mcdonalds.fryer":               "Fryer",
-  "itemgroup.mcdonalds":                 "McDonalds"
+  "item.mcdonalds.potato_cutter":        "Potato Cutter",
+  "item.mcdonalds.raw_fries":            "Raw Fries",
+  "item.mcdonalds.fried_potatoes":       "Fried Potatoes",
+  "item.mcdonalds.raw_nugget":           "Raw Nugget",
+  "item.mcdonalds.raw_filet":            "Raw Filet",
+  "item.mcdonalds.raw_pie":              "Raw Apple Pie"
 }

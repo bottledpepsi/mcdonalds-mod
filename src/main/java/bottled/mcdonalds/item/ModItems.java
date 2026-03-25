@@ -27,7 +27,7 @@ public class ModItems {
     public static final Item LARGE_FRIES  = register("large_fries",
             p -> new Item(p.food(ModFoodComponents.LARGE_FRIES)));
     public static final Item MCNUGGET     = register("mcnugget",
-            p -> new Item(p.food(ModFoodComponents.MCNUGGET)));
+            p -> new Item(p.food(ModFoodComponents.MCNUGGET, ModFoodComponents.MCNUGGET_CONSUMABLE)));
     public static final Item HASHBROWN    = register("hashbrown",
             p -> new Item(p.food(ModFoodComponents.HASHBROWN)));
     public static final Item SMALL_COKE  = register("small_coke",
@@ -47,6 +47,14 @@ public class ModItems {
 
     public static final Item RAW_MCIUM   = register("raw_mcium",   Item::new);
     public static final Item MCIUM_INGOT = register("mcium_ingot", Item::new);
+
+    // ── Crafting intermediates ────────────────────────────────────────────────
+    public static final Item POTATO_CUTTER  = register("potato_cutter",  Item::new);
+    public static final Item RAW_FRIES      = register("raw_fries",      Item::new);
+    public static final Item FRIED_POTATOES = register("fried_potatoes", Item::new);
+    public static final Item RAW_NUGGET     = register("raw_nugget",     Item::new);
+    public static final Item RAW_FILET      = register("raw_filet",      Item::new);
+    public static final Item RAW_PIE        = register("raw_pie",        Item::new);
 
     public static final Item MCIUM_PICKAXE = register("mcium_pickaxe",
             p -> new Item(p.pickaxe(ModToolMaterial.MCIUM_PICKAXE, 1.0f, -2.8f)));
