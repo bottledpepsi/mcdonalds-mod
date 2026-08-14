@@ -1,4 +1,4 @@
-# McDonald's Mod — *I'm Lovin' It*
+# McDonald's Mod
 
 > Craft, cook, and eat your way through a full McDonald's menu — with real multi-step recipes, custom effects, and a brand new ore tier.
 
@@ -46,11 +46,11 @@ Full tool set (Pickaxe, Sword, Axe, Shovel, Hoe), all fully enchantable.
 
 ## Compatibility
 
-Minecraft 26.1 - 26.1.1 · Fabric (Fabric API required) · Java 25+
+Minecraft 26.2 · Fabric (Fabric API required) · Java 25+
 
 ---
 
-*Not affiliated with or endorsed by McDonald's Corporation. "I'm Lovin' It" is a trademark of McDonald's.*
+*Not affiliated with or endorsed by McDonald's Corporation.*
 
 ![Screenshot of items](https://cdn.modrinth.com/data/y8pKx5jr/images/30d8db3f53fb531d9e26bcc93891932152b41950.png)
 ![Mcium Tools and custom mobs](https://cdn.modrinth.com/data/y8pKx5jr/images/db363828478a5ba29127b2cafd67ca62ce8e5315.png)
