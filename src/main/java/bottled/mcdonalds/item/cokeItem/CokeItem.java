@@ -9,9 +9,18 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.level.Level;
 
-public class MediumCokeItem extends Item {
-    public MediumCokeItem(Item.Properties properties) {
+/**
+ * A drinkable Coke item that grants Speed for a configurable duration and amplifier.
+ * Replaces the previous SmallCokeItem/MediumCokeItem/LargeCokeItem duplicates.
+ */
+public class CokeItem extends Item {
+    private final int effectDuration;
+    private final int effectAmplifier;
+
+    public CokeItem(Item.Properties properties, int effectDuration, int effectAmplifier) {
         super(properties);
+        this.effectDuration = effectDuration;
+        this.effectAmplifier = effectAmplifier;
     }
 
     @Override
@@ -22,7 +31,7 @@ public class MediumCokeItem extends Item {
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity user) {
         if (user instanceof Player player) {
-            player.addEffect(new MobEffectInstance(MobEffects.SPEED, 160, 0));
+            player.addEffect(new MobEffectInstance(MobEffects.SPEED, effectDuration, effectAmplifier));
             if (!player.getAbilities().instabuild) {
                 stack.shrink(1);
             }

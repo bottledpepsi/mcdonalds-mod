@@ -10,9 +10,7 @@ import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.ShovelItem;
 import bottled.mcdonalds.McDonaldsMod;
-import bottled.mcdonalds.item.cokeItem.LargeCokeItem;
-import bottled.mcdonalds.item.cokeItem.MediumCokeItem;
-import bottled.mcdonalds.item.cokeItem.SmallCokeItem;
+import bottled.mcdonalds.item.cokeItem.CokeItem;
 
 
 import java.util.function.Function;
@@ -31,11 +29,11 @@ public class ModItems {
     public static final Item HASHBROWN    = register("hashbrown",
             p -> new Item(p.food(ModFoodComponents.HASHBROWN)));
     public static final Item SMALL_COKE  = register("small_coke",
-            p -> new SmallCokeItem(p.food(ModFoodComponents.SMALL_COKE, ModFoodComponents.COKE_CONSUMABLE)));
+            p -> new CokeItem(p.food(ModFoodComponents.SMALL_COKE, ModFoodComponents.COKE_CONSUMABLE), 100, 0));
     public static final Item MEDIUM_COKE = register("medium_coke",
-            p -> new MediumCokeItem(p.food(ModFoodComponents.MEDIUM_COKE, ModFoodComponents.COKE_CONSUMABLE)));
+            p -> new CokeItem(p.food(ModFoodComponents.MEDIUM_COKE, ModFoodComponents.COKE_CONSUMABLE), 180, 0));
     public static final Item LARGE_COKE  = register("large_coke",
-            p -> new LargeCokeItem(p.food(ModFoodComponents.LARGE_COKE, ModFoodComponents.COKE_CONSUMABLE)));
+            p -> new CokeItem(p.food(ModFoodComponents.LARGE_COKE, ModFoodComponents.COKE_CONSUMABLE), 200, 1));
     public static final Item APPLE_PIE    = register("apple_pie",
             p -> new Item(p.food(ModFoodComponents.APPLE_PIE)));
     public static final Item MCFLURRY     = register("mcflurry",

@@ -1,6 +1,6 @@
 {
   "type": "minecraft:smelting",
-  "ingredient": "mcdonalds:shredded_potato",
+  "ingredient": "mcdonalds:fried_potatoes",
   "result": { "id": "mcdonalds:hashbrown" },
   "experience": 0.35,
   "cookingtime": 100
