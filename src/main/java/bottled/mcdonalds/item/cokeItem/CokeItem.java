@@ -1,5 +1,7 @@
 package bottled.mcdonalds.item.cokeItem;
 
+import net.minecraft.advancements.triggers.CriteriaTriggers;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
@@ -31,6 +33,9 @@ public class CokeItem extends Item {
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity user) {
         if (user instanceof Player player) {
+            if (player instanceof ServerPlayer serverPlayer) {
+                CriteriaTriggers.CONSUME_ITEM.trigger(serverPlayer, stack);
+            }
             player.addEffect(new MobEffectInstance(MobEffects.SPEED, effectDuration, effectAmplifier));
             if (!player.getAbilities().instabuild) {
                 stack.shrink(1);
