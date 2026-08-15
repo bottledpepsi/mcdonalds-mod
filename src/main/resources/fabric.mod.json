@@ -19,7 +19,10 @@
 			"bottled.mcdonalds.McDonaldsMod"
 		],
 		"client": [
-			"bottled.mcdonalds.McDonaldsModClient"
+			"bottled.mcdonalds.client.McDonaldsModClient"
+		],
+		"fabric-datagen": [
+			"bottled.mcdonalds.datagen.McDonaldsDataGenerator"
 		]
 	},
 	"mixins": [

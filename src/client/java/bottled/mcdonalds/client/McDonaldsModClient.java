@@ -1,4 +1,4 @@
-package bottled.mcdonalds;
+package bottled.mcdonalds.client;
 
 import net.fabricmc.api.ClientModInitializer;
 
