@@ -63,7 +63,7 @@ public class McDonaldsAdvancementProvider extends FabricAdvancementProvider {
                 .display(
                         ModItems.MCRIB,
                         Component.literal("I love the McRib"),
-                        Component.literal("It's just so good"),
+                        Component.literal("Eat a delicious McRib"),
                         null,
                         AdvancementType.TASK,
                         true,
@@ -95,7 +95,7 @@ public class McDonaldsAdvancementProvider extends FabricAdvancementProvider {
                 .parent(root)
                 .display(
                         ModItems.MCNUGGET,
-                        Component.literal("Chicken McNugget"),
+                        Component.literal("Chicken Nugget"),
                         Component.literal("Eat a McNugget"),
                         null,
                         AdvancementType.TASK,
