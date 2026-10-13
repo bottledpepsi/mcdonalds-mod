@@ -1,12 +1,12 @@
 package bottled.mcdonalds.world.gen;
 
+import bottled.mcdonalds.McDonaldsMod;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.levelgen.GenerationStep;
-import bottled.mcdonalds.McDonaldsMod;
 
 public class ModOreGeneration {
     public static void registerOreGeneration() {

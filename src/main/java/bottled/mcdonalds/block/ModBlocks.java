@@ -1,5 +1,6 @@
 package bottled.mcdonalds.block;
 
+import bottled.mcdonalds.McDonaldsMod;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -13,7 +14,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import bottled.mcdonalds.McDonaldsMod;
 
 import java.util.function.Function;
 
@@ -40,7 +40,7 @@ public class ModBlocks {
     private static Block registerBlock(String name, Function<ResourceKey<Block>, Block> factory) {
         Identifier id = Identifier.fromNamespaceAndPath(McDonaldsMod.MOD_ID, name);
         ResourceKey<Block> blockKey = ResourceKey.create(Registries.BLOCK, id);
-        ResourceKey<Item> itemKey   = ResourceKey.create(Registries.ITEM, id);
+        ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, id);
 
         Block block = factory.apply(blockKey);
         Registry.register(BuiltInRegistries.ITEM, id,

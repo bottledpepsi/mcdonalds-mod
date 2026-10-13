@@ -1,5 +1,7 @@
 package bottled.mcdonalds.item;
 
+import bottled.mcdonalds.McDonaldsMod;
+import bottled.mcdonalds.block.ModBlocks;
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -9,8 +11,6 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStackTemplate;
-import bottled.mcdonalds.McDonaldsMod;
-import bottled.mcdonalds.block.ModBlocks;
 
 public class ModItemGroups {
     public static final CreativeModeTab MCDONALDS_GROUP = Registry.register(

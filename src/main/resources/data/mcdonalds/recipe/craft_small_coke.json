@@ -5,5 +5,8 @@
     "minecraft:paper",
     "minecraft:sugar"
   ],
-  "result": { "id": "mcdonalds:small_coke", "count": 1 }
+  "result": {
+    "id": "mcdonalds:small_coke",
+    "count": 1
+  }
 }

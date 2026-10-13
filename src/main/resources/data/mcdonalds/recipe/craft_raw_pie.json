@@ -1,10 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": ["WW", "AS", "WW"],
+  "pattern": [
+    "WW",
+    "AS",
+    "WW"
+  ],
   "key": {
     "W": "minecraft:wheat",
     "A": "minecraft:apple",
     "S": "minecraft:sugar"
   },
-  "result": { "id": "mcdonalds:raw_pie", "count": 1 }
+  "result": {
+    "id": "mcdonalds:raw_pie",
+    "count": 1
+  }
 }

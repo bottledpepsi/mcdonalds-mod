@@ -1,10 +1,10 @@
 package bottled.mcdonalds;
 
-import bottled.mcdonalds.world.gen.ModOreGeneration;
-import net.fabricmc.api.ModInitializer;
 import bottled.mcdonalds.block.ModBlocks;
 import bottled.mcdonalds.item.ModItemGroups;
 import bottled.mcdonalds.item.ModItems;
+import bottled.mcdonalds.world.gen.ModOreGeneration;
+import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

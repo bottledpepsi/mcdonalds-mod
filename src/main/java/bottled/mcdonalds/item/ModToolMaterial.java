@@ -17,9 +17,9 @@ public class ModToolMaterial {
     // Netherite tools can. The Mcium ores/blocks themselves require a diamond tool
     // (see data/minecraft/tags/block/needs_diamond_tool.json).
     public static final TagKey<Block> MCIUM_MINING_LEVEL = BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
-    public static final float MCIUM_MINING_SPEED        = 15f;
+    public static final float MCIUM_MINING_SPEED = 15f;
     public static final float MCIUM_ATTACK_DAMAGE_BONUS = 3.5f;
-    public static final int   MCIUM_ENCHANTABILITY      = 56;
+    public static final int MCIUM_ENCHANTABILITY = 56;
 
     // Items accepted for repairing Mcium tools (see data/mcdonalds/tags/item/mcium_tool_materials.json).
     public static final TagKey<Item> MCIUM_REPAIR_MATERIALS = TagKey.create(

@@ -21,6 +21,42 @@ public class ModFoodComponents {
     public static final Consumable SMALL_COKE_CONSUMABLE = coke(100, 0);
     public static final Consumable MEDIUM_COKE_CONSUMABLE = coke(180, 0);
     public static final Consumable LARGE_COKE_CONSUMABLE = coke(200, 1);
+    // McFlurry: brain freeze = Slowness II, sugar rush = Regeneration I // Gulpy sound
+    public static final Consumable MCFLURRY_CONSUMABLE = Consumables.defaultFood()
+            .onConsume(new ApplyStatusEffectsConsumeEffect(
+                    new MobEffectInstance(MobEffects.SLOWNESS, 100, 1), 1.0f))
+            .onConsume(new ApplyStatusEffectsConsumeEffect(
+                    new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1.0f))
+            .sound(SoundEvents.HONEY_DRINK)
+            .build();
+    // McRib: Strength II for 10 seconds (200 ticks)
+    public static final Consumable MCRIB_CONSUMABLE = Consumables.defaultFood()
+            .onConsume(new ApplyStatusEffectsConsumeEffect(
+                    new MobEffectInstance(MobEffects.STRENGTH, 200, 1), 1.0f))
+            .build();
+    // Filet-O-Fish: Water Breathing 30s (600t) + Dolphins Grace 10s (200t)
+    public static final Consumable FILET_O_FISH_CONSUMABLE = Consumables.defaultFood()
+            .onConsume(new ApplyStatusEffectsConsumeEffect(
+                    new MobEffectInstance(MobEffects.WATER_BREATHING, 600, 0), 1.0f))
+            .onConsume(new ApplyStatusEffectsConsumeEffect(
+                    new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 200, 0), 1.0f))
+            .build();
+    public static final Consumable MCNUGGET_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(0.75F)
+            .build();
+    public static final FoodProperties BIG_MAC = new FoodProperties.Builder().nutrition(10).saturationModifier(0.8f).build();
+    public static final FoodProperties SMALL_FRIES = new FoodProperties.Builder().nutrition(2).saturationModifier(0.1f).build();
+    public static final FoodProperties MEDIUM_FRIES = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).build();
+    public static final FoodProperties LARGE_FRIES = new FoodProperties.Builder().nutrition(4).saturationModifier(0.3f).build();
+    public static final FoodProperties MCNUGGET = new FoodProperties.Builder().nutrition(1).saturationModifier(0.1f).alwaysEdible().build();
+    public static final FoodProperties HASHBROWN = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).build();
+    public static final FoodProperties SMALL_COKE = new FoodProperties.Builder().nutrition(0).saturationModifier(0.1f).alwaysEdible().build();
+    public static final FoodProperties MEDIUM_COKE = new FoodProperties.Builder().nutrition(0).saturationModifier(0.2f).alwaysEdible().build();
+    public static final FoodProperties LARGE_COKE = new FoodProperties.Builder().nutrition(0).saturationModifier(0.3f).alwaysEdible().build();
+    public static final FoodProperties APPLE_PIE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.4f).build();
+    public static final FoodProperties MCFLURRY = new FoodProperties.Builder().nutrition(6).saturationModifier(0.4f).build();
+    public static final FoodProperties MCRIB = new FoodProperties.Builder().nutrition(9).saturationModifier(0.8f).build();
+    public static final FoodProperties FILET_O_FISH = new FoodProperties.Builder().nutrition(5).saturationModifier(0.4f).build();
 
     private static Consumable coke(int durationTicks, int amplifier) {
         return Consumables.defaultFood()
@@ -31,45 +67,4 @@ public class ModFoodComponents {
                         new MobEffectInstance(MobEffects.SPEED, durationTicks, amplifier), 1.0f))
                 .build();
     }
-
-    // McFlurry: brain freeze = Slowness II, sugar rush = Regeneration I // Gulpy sound
-    public static final Consumable MCFLURRY_CONSUMABLE = Consumables.defaultFood()
-            .onConsume(new ApplyStatusEffectsConsumeEffect(
-                    new MobEffectInstance(MobEffects.SLOWNESS, 100, 1), 1.0f))
-            .onConsume(new ApplyStatusEffectsConsumeEffect(
-                    new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1.0f))
-            .sound(SoundEvents.HONEY_DRINK)
-            .build();
-
-    // McRib: Strength II for 10 seconds (200 ticks)
-    public static final Consumable MCRIB_CONSUMABLE = Consumables.defaultFood()
-            .onConsume(new ApplyStatusEffectsConsumeEffect(
-                    new MobEffectInstance(MobEffects.STRENGTH, 200, 1), 1.0f))
-            .build();
-
-    // Filet-O-Fish: Water Breathing 30s (600t) + Dolphins Grace 10s (200t)
-    public static final Consumable FILET_O_FISH_CONSUMABLE = Consumables.defaultFood()
-            .onConsume(new ApplyStatusEffectsConsumeEffect(
-                    new MobEffectInstance(MobEffects.WATER_BREATHING, 600, 0), 1.0f))
-            .onConsume(new ApplyStatusEffectsConsumeEffect(
-                    new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 200, 0), 1.0f))
-            .build();
-
-    public static final Consumable MCNUGGET_CONSUMABLE = Consumables.defaultFood()
-            .consumeSeconds(0.75F)
-            .build();
-
-    public static final FoodProperties BIG_MAC = new FoodProperties.Builder().nutrition(10).saturationModifier(0.8f).build();
-    public static final FoodProperties SMALL_FRIES   = new FoodProperties.Builder().nutrition(2).saturationModifier(0.1f).build();
-    public static final FoodProperties MEDIUM_FRIES  = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).build();
-    public static final FoodProperties LARGE_FRIES   = new FoodProperties.Builder().nutrition(4).saturationModifier(0.3f).build();
-    public static final FoodProperties MCNUGGET      = new FoodProperties.Builder().nutrition(1).saturationModifier(0.1f).alwaysEdible().build();
-    public static final FoodProperties HASHBROWN     = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).build();
-    public static final FoodProperties SMALL_COKE    = new FoodProperties.Builder().nutrition(0).saturationModifier(0.1f).alwaysEdible().build();
-    public static final FoodProperties MEDIUM_COKE   = new FoodProperties.Builder().nutrition(0).saturationModifier(0.2f).alwaysEdible().build();
-    public static final FoodProperties LARGE_COKE    = new FoodProperties.Builder().nutrition(0).saturationModifier(0.3f).alwaysEdible().build();
-    public static final FoodProperties APPLE_PIE     = new FoodProperties.Builder().nutrition(3).saturationModifier(0.4f).build();
-    public static final FoodProperties MCFLURRY      = new FoodProperties.Builder().nutrition(6).saturationModifier(0.4f).build();
-    public static final FoodProperties MCRIB = new FoodProperties.Builder().nutrition(9).saturationModifier(0.8f).build();
-    public static final FoodProperties FILET_O_FISH  = new FoodProperties.Builder().nutrition(5).saturationModifier(0.4f).build();
 }

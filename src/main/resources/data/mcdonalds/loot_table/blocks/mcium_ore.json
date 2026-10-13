@@ -17,7 +17,9 @@
                       "minecraft:enchantments": [
                         {
                           "enchantments": "minecraft:silk_touch",
-                          "levels": { "min": 1 }
+                          "levels": {
+                            "min": 1
+                          }
                         }
                       ]
                     }
@@ -34,7 +36,9 @@
                   "formula": "minecraft:ore_drops",
                   "function": "minecraft:apply_bonus"
                 },
-                { "function": "minecraft:explosion_decay" }
+                {
+                  "function": "minecraft:explosion_decay"
+                }
               ],
               "name": "mcdonalds:raw_mcium"
             }

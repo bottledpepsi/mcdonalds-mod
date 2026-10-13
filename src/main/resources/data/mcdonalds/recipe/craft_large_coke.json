@@ -9,5 +9,8 @@
     "minecraft:sugar",
     "minecraft:sugar"
   ],
-  "result": { "id": "mcdonalds:large_coke", "count": 1 }
+  "result": {
+    "id": "mcdonalds:large_coke",
+    "count": 1
+  }
 }

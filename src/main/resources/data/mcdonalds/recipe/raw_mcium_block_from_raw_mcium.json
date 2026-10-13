@@ -11,5 +11,8 @@
     "mcdonalds:raw_mcium",
     "mcdonalds:raw_mcium"
   ],
-  "result": { "id": "mcdonalds:raw_mcium_block", "count": 1 }
+  "result": {
+    "id": "mcdonalds:raw_mcium_block",
+    "count": 1
+  }
 }

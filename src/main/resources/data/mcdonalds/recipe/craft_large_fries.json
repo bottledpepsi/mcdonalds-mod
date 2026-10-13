@@ -1,9 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": ["FF", "FP"],
+  "pattern": [
+    "FF",
+    "FP"
+  ],
   "key": {
     "F": "mcdonalds:fried_potatoes",
     "P": "minecraft:paper"
   },
-  "result": { "id": "mcdonalds:large_fries", "count": 1 }
+  "result": {
+    "id": "mcdonalds:large_fries",
+    "count": 1
+  }
 }

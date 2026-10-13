@@ -11,5 +11,8 @@
     "mcdonalds:mcium_ingot",
     "mcdonalds:mcium_ingot"
   ],
-  "result": { "id": "mcdonalds:mcium_block", "count": 1 }
+  "result": {
+    "id": "mcdonalds:mcium_block",
+    "count": 1
+  }
 }
