@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "has_mcium_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mcdonalds:mcium_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.mcdonalds.get_mcium_ingot.description"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "id": "mcdonalds:mcium_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.mcdonalds.get_mcium_ingot.title"
+    }
+  },
+  "parent": "mcdonalds:root",
+  "requirements": [
+    [
+      "has_mcium_ingot"
+    ]
+  ]
+}

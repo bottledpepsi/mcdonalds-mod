@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "has_big_mac": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mcdonalds:big_mac"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.mcdonalds.root.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "id": "mcdonalds:big_mac"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.mcdonalds.root.title"
+    },
+    "background": "minecraft:gui/advancements/backgrounds/adventure"
+  },
+  "requirements": [
+    [
+      "has_big_mac"
+    ]
+  ]
+}

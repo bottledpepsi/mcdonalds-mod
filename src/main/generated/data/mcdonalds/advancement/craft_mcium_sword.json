@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "has_mcium_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mcdonalds:mcium_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.mcdonalds.craft_mcium_sword.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "id": "mcdonalds:mcium_sword"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.mcdonalds.craft_mcium_sword.title"
+    }
+  },
+  "parent": "mcdonalds:get_mcium_ingot",
+  "requirements": [
+    [
+      "has_mcium_sword"
+    ]
+  ]
+}

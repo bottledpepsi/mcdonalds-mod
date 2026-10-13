@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": ["FF"],
-  "key": {
-    "F": "mcdonalds:fried_potatoes"
-  },
-  "result": { "id": "mcdonalds:hashbrown", "count": 1 }
-}

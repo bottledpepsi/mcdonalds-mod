@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "ate_mcnugget": {
+      "conditions": {
+        "item": {
+          "items": "mcdonalds:mcnugget"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.mcdonalds.eat_mcnugget.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "id": "mcdonalds:mcnugget"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.mcdonalds.eat_mcnugget.title"
+    }
+  },
+  "parent": "mcdonalds:root",
+  "requirements": [
+    [
+      "ate_mcnugget"
+    ]
+  ]
+}

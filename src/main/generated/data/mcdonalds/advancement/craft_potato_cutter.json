@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "craft_potato_cutter": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mcdonalds:potato_cutter"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.mcdonalds.craft_potato_cutter.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "id": "mcdonalds:medium_fries"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.mcdonalds.craft_potato_cutter.title"
+    }
+  },
+  "parent": "mcdonalds:root",
+  "requirements": [
+    [
+      "craft_potato_cutter"
+    ]
+  ]
+}

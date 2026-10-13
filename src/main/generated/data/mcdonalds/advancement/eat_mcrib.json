@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "ate_mcrib": {
+      "conditions": {
+        "item": {
+          "items": "mcdonalds:mcrib"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.mcdonalds.eat_mcrib.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "id": "mcdonalds:mcrib"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.mcdonalds.eat_mcrib.title"
+    }
+  },
+  "parent": "mcdonalds:root",
+  "requirements": [
+    [
+      "ate_mcrib"
+    ]
+  ]
+}

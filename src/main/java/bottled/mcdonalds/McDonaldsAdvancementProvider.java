@@ -2,7 +2,6 @@ package bottled.mcdonalds;
 
 import bottled.mcdonalds.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
-import net.fabricmc.fabric.api.datagen.v1.advancement.FabricAdvancementBuilder;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementHolder;
@@ -14,26 +13,43 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
-
+import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
+/**
+ * Generates the McDonalds advancement tab.
+ * <p>
+ * The generated JSON is committed under {@code src/main/generated} so that normal builds
+ * ship the advancements without having to run {@code runDatagen} first. Re-run datagen
+ * and commit the result whenever this class changes.
+ * <p>
+ * All titles/descriptions are translatable: {@code advancement.mcdonalds.<id>.title|description}.
+ */
 public class McDonaldsAdvancementProvider extends FabricAdvancementProvider {
     public McDonaldsAdvancementProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(output, registryLookup);
     }
 
+    private static Component text(String id, String part) {
+        return Component.translatable("advancement." + McDonaldsMod.MOD_ID + "." + id + "." + part);
+    }
+
+    private static Identifier id(String path) {
+        return Identifier.fromNamespaceAndPath(McDonaldsMod.MOD_ID, path);
+    }
+
     @Override
-    public void generateAdvancement(HolderLookup.Provider wrapperLookup, Consumer<AdvancementHolder> consumer) {
+    public void generateAdvancement(HolderLookup.Provider wrapperLookup, @NonNull Consumer<AdvancementHolder> consumer) {
         HolderLookup.RegistryLookup<net.minecraft.world.item.Item> itemLookup = wrapperLookup.lookupOrThrow(Registries.ITEM);
 
         // Root advancement - this defines the tab: title, icon, and background shown on the Advancements screen.
         AdvancementHolder root = Advancement.Builder.advancement()
                 .display(
                         ModItems.BIG_MAC,
-                        Component.literal("McDonalds"),
-                        Component.literal("I'm Lovin' It"),
+                        text("root", "title"),
+                        text("root", "description"),
                         Identifier.withDefaultNamespace("gui/advancements/backgrounds/adventure"),
                         AdvancementType.TASK,
                         true,
@@ -41,14 +57,14 @@ public class McDonaldsAdvancementProvider extends FabricAdvancementProvider {
                         false
                 )
                 .addCriterion("has_big_mac", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.BIG_MAC))
-                .save(consumer, Identifier.fromNamespaceAndPath(McDonaldsMod.MOD_ID, "root"));
+                .save(consumer, id("root"));
 
-        AdvancementHolder craftPotatoCutter = Advancement.Builder.advancement()
+        Advancement.Builder.advancement()
                 .parent(root)
                 .display(
                         ModItems.MEDIUM_FRIES,
-                        Component.literal("Would You Like Fries With That?"),
-                        Component.literal("Craft the Potato Cutter"),
+                        text("craft_potato_cutter", "title"),
+                        text("craft_potato_cutter", "description"),
                         null,
                         AdvancementType.TASK,
                         true,
@@ -56,14 +72,14 @@ public class McDonaldsAdvancementProvider extends FabricAdvancementProvider {
                         false
                 )
                 .addCriterion("craft_potato_cutter", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.POTATO_CUTTER))
-                .save(consumer, Identifier.fromNamespaceAndPath(McDonaldsMod.MOD_ID, "craft_potato_cutter"));
+                .save(consumer, id("craft_potato_cutter"));
 
-        AdvancementHolder eatBigMac = Advancement.Builder.advancement()
+        Advancement.Builder.advancement()
                 .parent(root)
                 .display(
                         ModItems.MCRIB,
-                        Component.literal("I love the McRib"),
-                        Component.literal("Eat a delicious McRib"),
+                        text("eat_mcrib", "title"),
+                        text("eat_mcrib", "description"),
                         null,
                         AdvancementType.TASK,
                         true,
@@ -71,14 +87,14 @@ public class McDonaldsAdvancementProvider extends FabricAdvancementProvider {
                         false
                 )
                 .addCriterion("ate_mcrib", ConsumeItemTrigger.TriggerInstance.usedItem(itemLookup, ModItems.MCRIB))
-                .save(consumer, Identifier.fromNamespaceAndPath(McDonaldsMod.MOD_ID, "eat_mcrib"));
+                .save(consumer, id("eat_mcrib"));
 
-        AdvancementHolder drinkCoke = Advancement.Builder.advancement()
+        Advancement.Builder.advancement()
                 .parent(root)
                 .display(
                         ModItems.MEDIUM_COKE,
-                        Component.literal("Thirsty?"),
-                        Component.literal("Drink a Coke"),
+                        text("drink_coke", "title"),
+                        text("drink_coke", "description"),
                         null,
                         AdvancementType.TASK,
                         true,
@@ -89,14 +105,14 @@ public class McDonaldsAdvancementProvider extends FabricAdvancementProvider {
                 .addCriterion("drank_medium_coke", ConsumeItemTrigger.TriggerInstance.usedItem(itemLookup, ModItems.MEDIUM_COKE))
                 .addCriterion("drank_large_coke", ConsumeItemTrigger.TriggerInstance.usedItem(itemLookup, ModItems.LARGE_COKE))
                 .requirements(AdvancementRequirements.Strategy.OR)
-                .save(consumer, Identifier.fromNamespaceAndPath(McDonaldsMod.MOD_ID, "drink_coke"));
+                .save(consumer, id("drink_coke"));
 
-        AdvancementHolder eatNugget = Advancement.Builder.advancement()
+        Advancement.Builder.advancement()
                 .parent(root)
                 .display(
                         ModItems.MCNUGGET,
-                        Component.literal("Chicken Nugget"),
-                        Component.literal("Eat a McNugget"),
+                        text("eat_mcnugget", "title"),
+                        text("eat_mcnugget", "description"),
                         null,
                         AdvancementType.TASK,
                         true,
@@ -104,14 +120,15 @@ public class McDonaldsAdvancementProvider extends FabricAdvancementProvider {
                         false
                 )
                 .addCriterion("ate_mcnugget", ConsumeItemTrigger.TriggerInstance.usedItem(itemLookup, ModItems.MCNUGGET))
-                .save(consumer, Identifier.fromNamespaceAndPath(McDonaldsMod.MOD_ID, "eat_mcnugget"));
+                .save(consumer, id("eat_mcnugget"));
 
+        // Mcium is found by mining, not by cooking, so this hangs off the root rather than the Potato Cutter.
         AdvancementHolder getMciumIngot = Advancement.Builder.advancement()
-                .parent(craftPotatoCutter)
+                .parent(root)
                 .display(
                         ModItems.MCIUM_INGOT,
-                        Component.literal("A New Metal?"),
-                        Component.literal("Obtain a Mcium Ingot"),
+                        text("get_mcium_ingot", "title"),
+                        text("get_mcium_ingot", "description"),
                         null,
                         AdvancementType.GOAL,
                         true,
@@ -119,14 +136,14 @@ public class McDonaldsAdvancementProvider extends FabricAdvancementProvider {
                         false
                 )
                 .addCriterion("has_mcium_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.MCIUM_INGOT))
-                .save(consumer, Identifier.fromNamespaceAndPath(McDonaldsMod.MOD_ID, "get_mcium_ingot"));
+                .save(consumer, id("get_mcium_ingot"));
 
-        AdvancementHolder eatApplePie = Advancement.Builder.advancement()
+        Advancement.Builder.advancement()
                 .parent(root)
                 .display(
                         ModItems.APPLE_PIE,
-                        Component.literal("As American As..."),
-                        Component.literal("Eat an Apple Pie"),
+                        text("eat_apple_pie", "title"),
+                        text("eat_apple_pie", "description"),
                         null,
                         AdvancementType.TASK,
                         true,
@@ -134,14 +151,14 @@ public class McDonaldsAdvancementProvider extends FabricAdvancementProvider {
                         false
                 )
                 .addCriterion("ate_apple_pie", ConsumeItemTrigger.TriggerInstance.usedItem(itemLookup, ModItems.APPLE_PIE))
-                .save(consumer, Identifier.fromNamespaceAndPath(McDonaldsMod.MOD_ID, "eat_apple_pie"));
+                .save(consumer, id("eat_apple_pie"));
 
-        AdvancementHolder craftMciumSword = Advancement.Builder.advancement()
+        Advancement.Builder.advancement()
                 .parent(getMciumIngot)
                 .display(
                         ModItems.MCIUM_SWORD,
-                        Component.literal("Drive-Thru Defender"),
-                        Component.literal("Craft a Mcium Sword"),
+                        text("craft_mcium_sword", "title"),
+                        text("craft_mcium_sword", "description"),
                         null,
                         AdvancementType.CHALLENGE,
                         true,
@@ -149,6 +166,6 @@ public class McDonaldsAdvancementProvider extends FabricAdvancementProvider {
                         false
                 )
                 .addCriterion("has_mcium_sword", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.MCIUM_SWORD))
-                .save(consumer, Identifier.fromNamespaceAndPath(McDonaldsMod.MOD_ID, "craft_mcium_sword"));
+                .save(consumer, id("craft_mcium_sword"));
     }
 }

@@ -1,0 +1,51 @@
+{
+  "criteria": {
+    "drank_small_coke": {
+      "conditions": {
+        "item": {
+          "items": "mcdonalds:small_coke"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "drank_medium_coke": {
+      "conditions": {
+        "item": {
+          "items": "mcdonalds:medium_coke"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "drank_large_coke": {
+      "conditions": {
+        "item": {
+          "items": "mcdonalds:large_coke"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.mcdonalds.drink_coke.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "id": "mcdonalds:medium_coke"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.mcdonalds.drink_coke.title"
+    }
+  },
+  "parent": "mcdonalds:root",
+  "requirements": [
+    [
+      "drank_small_coke",
+      "drank_medium_coke",
+      "drank_large_coke"
+    ]
+  ]
+}

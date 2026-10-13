@@ -11,7 +11,7 @@
 		"homepage": "https://bottledpepsi.github.io/",
 		"sources": "https://github.com/bottledpepsi/mcdonalds-mod"
 	},
-	"license": "GPL-v3.0",
+	"license": "GPL-3.0-only",
 	"icon": "assets/mcdonalds/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -34,7 +34,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.19",
-		"minecraft": ">=26.2",
+		"minecraft": "~26.2",
 		"java": ">=25",
 		"fabric-api": "*"
 	}

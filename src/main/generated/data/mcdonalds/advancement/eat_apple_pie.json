@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "ate_apple_pie": {
+      "conditions": {
+        "item": {
+          "items": "mcdonalds:apple_pie"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.mcdonalds.eat_apple_pie.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "id": "mcdonalds:apple_pie"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.mcdonalds.eat_apple_pie.title"
+    }
+  },
+  "parent": "mcdonalds:root",
+  "requirements": [
+    [
+      "ate_apple_pie"
+    ]
+  ]
+}
